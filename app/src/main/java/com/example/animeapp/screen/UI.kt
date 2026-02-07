@@ -111,7 +111,7 @@ fun HomeScreen() {
                     )
                 },
                 colors = TopAppBarDefaults.topAppBarColors(
-                    containerColor = Color(0xFF1A1A2E)
+                    containerColor = Color(0xFF0A0E27)
                 )
             )
         }
@@ -124,8 +124,9 @@ fun HomeScreen() {
                 .background(
                     Brush.verticalGradient(
                         colors = listOf(
-                            Color(0xFF1A1A2E),
-                            Color(0xFF16213E)
+                            Color(0xFF0A0E27),
+                            Color(0xFF151930),
+                            Color(0xFF1A1F3A)
                         )
                     )
                 ),
@@ -138,7 +139,7 @@ fun HomeScreen() {
                         text = "Featured",
                         fontSize = 20.sp,
                         fontWeight = FontWeight.SemiBold,
-                        color = Color.White,
+                        color = Color(0xFFE8E9ED),
                         modifier = Modifier.padding(horizontal = 16.dp, vertical = 8.dp)
                     )
 
@@ -158,7 +159,7 @@ fun HomeScreen() {
                     text = "All Anime",
                     fontSize = 20.sp,
                     fontWeight = FontWeight.SemiBold,
-                    color = Color.White,
+                    color = Color(0xFFE8E9ED),
                     modifier = Modifier.padding(horizontal = 16.dp, vertical = 8.dp)
                 )
             }
@@ -256,7 +257,7 @@ fun AnimeListItem(anime: Anime) {
             .padding(horizontal = 16.dp),
         shape = RoundedCornerShape(12.dp),
         colors = CardDefaults.cardColors(
-            containerColor = Color(0xFF0F3460)
+            containerColor = Color(0xFF1E2538)
         ),
         elevation = CardDefaults.cardElevation(defaultElevation = 4.dp)
     ) {
@@ -289,13 +290,13 @@ fun AnimeListItem(anime: Anime) {
                 ) {
                     Text(
                         text = anime.title,
-                        color = Color.White,
+                        color = Color(0xFFE8E9ED),
                         fontSize = 16.sp,
                         fontWeight = FontWeight.SemiBold
                     )
                     Text(
                         text = anime.genre,
-                        color = Color.White.copy(alpha = 0.7f),
+                        color = Color(0xFFB0B3C1),
                         fontSize = 13.sp
                     )
                 }
@@ -313,7 +314,7 @@ fun AnimeListItem(anime: Anime) {
                 )
                 Text(
                     text = anime.rating.toString(),
-                    color = Color.White,
+                    color = Color(0xFFE8E9ED),
                     fontSize = 15.sp,
                     fontWeight = FontWeight.Bold
                 )
@@ -322,7 +323,7 @@ fun AnimeListItem(anime: Anime) {
     }
 }
 
-@Preview(showBackground = true)
+@Preview
 @Composable
 fun Preview() {
     MaterialTheme {
